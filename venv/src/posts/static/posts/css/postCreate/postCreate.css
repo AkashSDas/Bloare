@@ -1,0 +1,52 @@
+@import url('../global.css');
+
+.form {
+  background: var(--bg-secondary);
+  margin: 1rem;
+  padding: 2rem;
+  border-radius: .4rem;
+  transition: transform .3s;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.form:hover {
+  transform: translateY(-3px);
+}
+
+.form p {
+  margin: 2rem;
+}
+
+.form input,
+.form textarea {
+  color: var(--text-secondary);
+  background: transparent;
+  border: none;
+  border-bottom: 2px dashed var(--blue);
+  font-size: 1.8rem;
+  width: 90%;
+  font-family: var(--roboto);
+  outline: none;
+  height: 3rem;
+}
+
+.form textarea {
+  height: 16rem;
+}
+
+.form .submit-btn {
+  color: var(--text-secondary);
+  font-size: 1.4rem;
+  margin: 1.6rem auto;
+  width: 90%;
+  border: none;
+  border-radius: .3rem;
+  background: var(--green);
+  transition: transform .3s;
+  height: 3rem;
+}
+
+.form .submit-btn:hover {
+  transform: translateY(-3px);
+}

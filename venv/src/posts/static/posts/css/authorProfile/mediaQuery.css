@@ -1,0 +1,77 @@
+@import url('global.css');
+
+
+@media only screen and (max-width: 768px) {
+  .profile-container {
+    flex-direction: column;
+  }
+
+  .profile-container .img-container {
+    margin: 1rem auto;
+  }
+
+  .profile-container .details {
+    flex-grow: 1;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  main {
+    margin-left: 0rem;
+    padding: 0;
+    margin-bottom: 5rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  .heading {
+    font-size: 3rem;
+  }
+
+  .profile-container {
+    margin: 0;
+  }
+
+  .profile-container .img-container img {
+    height: 16rem;
+    width: 16rem;
+  }
+
+  .profile-container .details .btns>a {
+    font-size: 1.2rem;
+    width: 98%;
+  }
+
+  .forms .details-update-form,
+  .forms .img-update-form {
+    padding: 1rem;
+  }
+
+  .forms .details-update-form input,
+  .forms .img-update-form input {
+    padding: .5rem;
+    width: 60%;
+    height: .5rem;
+  }
+
+  .forms .details-update-form,
+  .forms .img-update-form,
+  .forms .details-update-form input,
+  .forms .img-update-form input {
+    font-size: 1.4rem;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+
+  .forms .details-update-form input,
+  .forms .img-update-form input {
+    width: 50%;
+  }
+}

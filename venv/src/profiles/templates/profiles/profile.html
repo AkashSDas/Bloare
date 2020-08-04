@@ -1,0 +1,59 @@
+{% extends 'profiles/base.html' %}
+
+{% block content %}
+
+<div class="profile">
+    <h1 class="heading">My Profile</h1>
+
+    <div class="hr"></div>
+
+    <section class="profile-container">
+        <div class="img-container">
+            <img src="{{ user.profile.image.url }}" alt="{{ user.username }}" class="img">
+        </div>
+        <div class="details">
+            <h3 class="username">
+                <i class="fas fa-user-astronaut"></i> {{ user.username }}
+            </h3>
+            <h3 class="email">
+                <i class="fas fa-envelope"></i> {{ user.email }}
+            </h3>
+            <div class="btns">
+                <a href="{% url 'user_posts' user.username %}" class="all-posts-btn">
+                    <i class="fas fa-eye"></i> My All Posts
+                </a>
+                <a href="#" class="edit-img-btn">
+                    <i class="fas fa-edit"></i> Edit Profile Picture
+                </a>
+                <a href="#" class="edit-details-btn">
+                    <i class="fas fa-user-edit"></i> Edit User Details
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <div class="hr"></div>
+
+    <section class="forms">
+        <!-- 
+            Adding special encoding type to our form so that our form can 
+            pass our profile image data properly. 
+        -->
+
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="details-update-form">
+                <h2>Update User Details</h2>
+                {{ u_form.as_p }}
+                <input type="submit" class="details-submit-btn">
+            </div>
+            <div class="img-update-form">
+                <h2>Update Profile Picture</h2>
+                {{ p_form.as_p }}
+                <input type="submit" class="img-submit-btn">
+            </div>
+        </form>
+    </section>
+</div>
+
+{% endblock content %}

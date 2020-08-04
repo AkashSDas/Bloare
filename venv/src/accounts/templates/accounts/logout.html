@@ -1,0 +1,26 @@
+{% extends 'accounts/base.html' %}
+
+{% block content %}
+
+<section class="signup">
+    <div class="heading">Logout Page</div>
+
+    <div class="hr"></div>
+
+    <div class="content">
+        <div class="img-container">
+            <img src="../../static/accounts/assets/images/img3.png" alt="signup" class="img">
+        </div>
+
+        <div class="form">
+            <div style="margin-bottom: 2rem;" class="password-reset-msg">
+                You are currently logged out
+            </div>
+            <a href="{% url 'login' %}" class="help">Login</a>
+            <br>
+            <a href="{% url 'signup' %}" class="help">Signup</a>
+        </div>
+    </div>
+</section>
+
+{% endblock content %}

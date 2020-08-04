@@ -1,0 +1,103 @@
+@import url('../global.css');
+
+.post-card {
+  margin: 2rem;
+  padding: 1.2rem 1.4rem;
+  background-color: var(--bg-secondary);
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.post-card .title {
+  font-size: 2rem;
+  font-family: var(--oswald);
+  margin: .8rem auto;
+}
+
+.post-card .title a {
+  color: var(--text-secondary);
+  text-decoration: underline;
+}
+
+.post-card .likes {
+  display: flex;
+  flex-direction: row;
+  margin-top: 1rem;
+  justify-content: center;
+}
+
+.post-card .likes>form {
+  margin: auto 2rem;
+}
+
+.post-card .likes>form button {
+  border: none;
+  background: transparent;
+  font-size: 1.4rem;
+  color: var(--text-secondary);
+  font-family: var(--roboto);
+  outline: none
+}
+
+.post-card .likes .fa-thumbs-up {
+  color: var(--green);
+}
+
+.post-card .likes .fa-thumbs-down {
+  color: var(--red);
+}
+
+.post-card .dates {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  font-family: var(--roboto);
+}
+
+.post-card .post-content-container .content {
+  margin: 1.6rem 0;
+  padding: 0;
+}
+
+.post-card .post-content-container .read-more-btn {
+  display: block;
+  width: 90%;
+  height: 3rem;
+  background: var(--purple);
+  border-radius: 1rem;
+  margin: 0 auto;
+  font-size: 1.2rem;
+  font-family: var(--roboto);
+}
+
+.post-card .post-content-container .read-more-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* Pagination */
+
+.pagination {
+  margin: 5rem auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 1.2rem;
+  font-family: var(--roboto);
+}
+
+.pagination>a {
+  padding: 1.5rem;
+  background: var(--pink);
+  border-radius: 50%;
+  margin: .5rem;
+  color: white;
+  transition: transform .3s;
+}

@@ -1,0 +1,30 @@
+{% extends 'accounts/base.html' %}
+
+{% block content %}
+
+<section class="signup">
+    <h1 class="heading">Login Page</h1>
+
+    <div class="hr"></div>
+
+    <div class="content">
+        <div class="img-container">
+            <img src="../../static/accounts/assets/images/img5.png" alt="login" class="img">
+        </div>
+
+        <div class="form">
+            <form method="POST">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <div class="btn-div">
+                    <input type="submit" class="submit submit-btn">
+                </div>
+            </form>
+            <a href="{% url 'password_reset' %}" class="help">Forgot Password?</a>
+            <br>
+            <a href="{% url 'signup' %}" class="help">Need an account?</a>
+        </div>
+    </div>
+</section>
+
+{% endblock content %}

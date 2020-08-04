@@ -1,0 +1,94 @@
+@import url('../global.css');
+
+.post-delete .delete-msg {
+  margin: 2rem auto;
+  font-size: 2rem;
+  text-align: center;
+  color: white;
+  font-family: var(--poppins);
+}
+
+.post-delete-form {
+  background: var(--bg-secondary);
+  margin: 1rem;
+  padding: 2rem;
+  border-radius: .4rem;
+  transition: transform .3s;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.post-delete-form .btns {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.post-delete-form .btns .delete-btn {
+  background: var(--red);
+  height: 4rem;
+}
+
+.post-delete-form .btns .cancel-btn {
+  background: var(--blue);
+  height: 3rem;
+  text-align: center;
+  padding-top: .8rem;
+  width: 45%;
+}
+
+.post-delete-form .btns .delete-btn,
+.post-delete-form .btns .cancel-btn {
+  transition: transform .3s;
+  font-family: var(--oswald);
+  color: white;
+  font-size: 1.6rem;
+  width: 45%;
+  margin: auto 1rem;
+  border-radius: 1rem;
+  border: none;
+}
+
+.post-delete .post-delete-form {
+  /* display: none; */
+  background: var(--bg-secondary);
+  border-radius: .4rem;
+  transition: transform .3s;
+  margin: 1rem 2rem 2rem 2rem;
+  padding: 2rem;
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+.post-delete .post-delete-form textarea {
+  color: var(--text-secondary);
+  background: transparent;
+  border: none;
+  border-bottom: 2px dashed var(--blue);
+  font-size: 1.8rem;
+  width: 90%;
+  font-family: var(--roboto);
+  outline: none;
+  height: 16rem;
+  margin-bottom: 2rem;
+}
+
+.post-delete .post-delete-form .submit-btn {
+  color: var(--text-secondary);
+  font-size: 1.4rem;
+  margin: 1.6rem auto;
+  border: none;
+  border-radius: 1rem;
+  background: var(--green);
+  transition: transform .3s;
+  height: 4rem;
+  width: 45%;
+}
+
+.post-delete .post-delete-form {
+  margin: 0rem 1rem 1rem 1rem;
+}
+
+.post-delete .post-delete-form .submit-btn {
+  margin: auto;
+}

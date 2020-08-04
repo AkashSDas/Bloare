@@ -1,0 +1,57 @@
+@import url('./global.css');
+
+h4 {
+  margin: 0 auto;
+  font-size: 2rem;
+  font-family: var(--roboto);
+  text-align: center;
+}
+
+.form.comment-form {
+  padding: .4rem;
+  padding-bottom: 0;
+}
+
+.comment-form textarea {
+  height: 6rem !important;
+  width: 95%;
+}
+
+.form.comment-card {
+  padding: .6rem;
+  padding-bottom: 2rem;
+}
+
+.comments .comment-list .comment-card .content,
+.comments .comment-list .comment-card .author,
+.comments .comment-list .comment-card .btns {
+  font-family: var(--roboto);
+  text-align: start;
+  margin: .4rem .4rem .8rem .4rem;
+}
+
+.comments .comment-list .comment-card .btns .update>a {
+  color: var(--green);
+}
+
+.comments .comment-list .comment-card .btns .delete>a {
+  color: var(--red);
+}
+
+.comment-list .comment-card .comment-replies {
+  font-family: var(--roboto);
+  text-align: start;
+  margin: .4rem 2rem;
+}
+
+.comment-list .comment-card .comment-replies .individual-reply {
+  margin-top: 2rem;
+}
+
+.comment-list .comment-card .comment-replies .individual-reply .btns .update-btn {
+  color: var(--green);
+}
+
+.comment-list .comment-card .comment-replies .individual-reply .btns .delete-btn {
+  color: var(--red);
+}

@@ -1,0 +1,26 @@
+{% extends 'comments/base.html' %}
+
+{% block content %}
+
+<section class="post-delete">
+    <h1 class="heading">Delete comment/reply</h1>
+
+    <div class="hr"></div>
+
+    <h3 class="delete-msg">Are you sure you want to delete this comment(reply)</h3>
+
+    <form method="POST">
+        {% csrf_token %}
+        <div class="post-delete-form">
+            {{ form.as_p }}
+            <div class="btns">
+                <input type="submit" name="submit" value='Delete' class="delete-btn">
+                <a href="{% url 'post_detail' object.content_object.id %}" class="cancel-btn">
+                    Cancel
+                </a>
+            </div>
+        </div>
+    </form>
+</section>
+
+{% endblock content %}

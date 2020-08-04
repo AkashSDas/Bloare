@@ -1,0 +1,74 @@
+<section class="comments">
+    <h4>{{ comments.count }} Comments</h4>
+
+    <div class="form comment-form">
+        <form method="POST" action=".">
+            {% csrf_token %}
+            {{ comment_form }}
+            <input class="submit-btn" type="submit" value="Submit">
+        </form>
+    </div>
+
+    <div class="comment-list">
+        {% for comment in comments %}
+
+        <div class="form comment-card">
+            <div class="content">
+                {{ comment.content }}
+            </div>
+            <div class="author">
+                By {{ comment.user }} | {{ comment.timestamp|timesince }} ago
+            </div>
+            <div class="btns">
+                <span class="reply">{{ comment.childern.count }} Replies</span>
+                {% if user == comment.user %}
+                | <span class="update">
+                    <a href="{% url 'comment_update' comment.id %}">Update</a>
+                </span>
+                | <span class="delete">
+                    <a href="{% url 'comment_delete' comment.id %}">Delete</a>
+                </span>
+                {% endif %}
+            </div>
+
+            <div class="form comment-form">
+                <form method="POST" action=".">
+                    {% csrf_token %}
+                    {{ comment_form }}
+                    <input type="hidden" name="parent_id" value="{{ comment.id }}">
+                    <input class="submit-btn" type="submit" value="Reply">
+                </form>
+            </div>
+
+            {% if comment.childern|length > 0 %}
+            <div class="hr"></div>
+            {% endif %}
+
+            <div class="comment-replies">
+                {% for child_comment in comment.childern %}
+
+                <div class="individual-reply">
+                    <span class="reply-content">
+                        {{ child_comment.content }}
+                    </span>
+                    <br>
+                    <div style="margin-bottom: .6rem;"></div>
+                    <span class="reply-info">
+                        By <span class="reply-author-name">{{ child_comment.user }}</span> |
+                        {{ child_comment.timestamp|timesince }} ago
+                    </span>
+                    <div class="btns">
+                        {% if user == child_comment.user %}
+                        <a href="{% url 'comment_update' child_comment.id %}" class="update-btn">Update</a>
+                        |
+                        <a href="{% url 'comment_delete' child_comment.id %}" class="delete-btn">Delete</a>
+                        {% endif %}
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+
+        {% endfor %}
+    </div>
+</section>

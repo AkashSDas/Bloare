@@ -1,0 +1,146 @@
+/* *** Google Fonts *** */
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&family=Staatliches&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Overpass&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Piedra&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+
+/* *** Extra Font Family *** */
+@font-face {
+  font-family: 'Gentona';
+  src: local('Gentona'),
+    url('../static/fonts/Rene Bieder - Gentona ExtraBold DEMO.otf') format("truetype");
+}
+
+
+/* *** Global Variables *** */
+:root {
+  --logo-font: "Piedra";
+  --text-primary: #b6b6b6;
+  --text-secondary: #ececec;
+  --bg-primary: #23232e;
+  --bg-secondary: #141418;
+  --transition-speed: 600ms;
+
+  --grey3: #6c7983;
+  --grey4: #454e56;
+  --grey5: #2a2e35;
+  --grey6: #12181b;
+
+  --hr-color: #808080;
+
+  --purple: #B236C7;
+  --blue: #139CFF;
+  --orange: #EA8A32;
+  --green: #09c372;
+  --red: #ff3860;
+  --pink: #ff4088;
+
+  --body-bg: #12181B;
+  --gentona: "Gentona";
+  --roboto: "Roboto Condensed";
+  --staat: "Staatliches";
+  --oswald: "Oswald";
+  --poppins: 'Poppins', sans-serif;
+  --overpass: "Overpass", sans-serif;
+
+  --btn-text: #ececec;
+  --nav-shadow: 4px 0 10px -3px #010101;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: var(--text-primary);
+  background-color: var(--bg-primary);
+  margin-bottom: 10rem;
+}
+
+.heading {
+  margin: 3rem auto;
+  font-size: 4rem;
+  font-weight: bold;
+  text-align: center;
+  font-family: var(--gentona);
+}
+
+h2 {
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+  font-family: var(--gentona);
+  margin: 1rem auto;
+  text-decoration: underline;
+}
+
+div.hr {
+  border-top: 2px dashed var(--hr-color);
+  margin: 1rem auto;
+  width: 95%;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+img {
+  z-index: 1;
+  mix-blend-mode: luminosity;
+}
+
+nav {
+  z-index: 999;
+}
+
+label {
+  font-size: 1.4rem;
+  color: var(--text-secondary);
+  font-family: var(--roboto);
+  display: none;
+}
+
+input:focus {
+  outline: none;
+}
+
+input::placeholder {
+  font-size: 1.2rem;
+}
+
+/* *** #Global Variables *** */
+
+
+/* *** Web browser Scrollbar *** */
+body::-webkit-scrollbar {
+  width: 0.25rem;
+}
+
+body::-webkit-scrollbar-track {
+  background: #1e1e24;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #6649b8;
+}
+
+/* *** #Web browser Scrollbar *** */
+
+
+/* *** Main Content *** */
+main {
+  margin-left: 5rem;
+  padding: 1rem;
+}
+
+/* *** #Main Content *** */
+
+#logo {
+  font-family: var(--logo-font);
+}

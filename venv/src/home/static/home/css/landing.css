@@ -1,0 +1,79 @@
+@import url(./global.css);
+
+/* * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+} */
+
+body {
+  /* width: 100%; */
+  /* height: 100vh; */
+  /* background-color: #12181b; */
+  background-color: var(--bg-primary);
+}
+
+/* **** Bloare Logo **** */
+#landing-page-logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: logo-fill 3s ease forwards 3s;
+}
+
+/* The logo child starts from 2 */
+#landing-page-logo path:nth-child(2) {
+  stroke-dasharray: 530.3526611328125;
+  stroke-dashoffset: 530.3526611328125;
+  animation: logo-animation 2s ease forwards;
+}
+
+#landing-page-logo path:nth-child(3) {
+  stroke-dasharray: 298.5975646972656;
+  stroke-dashoffset: 298.5975646972656;
+  animation: logo-animation 2s ease forwards 0.3s;
+}
+
+#landing-page-logo path:nth-child(4) {
+  stroke-dasharray: 372.1514892578125;
+  stroke-dashoffset: 372.1514892578125;
+  animation: logo-animation 2s ease forwards 0.6s;
+}
+
+#landing-page-logo path:nth-child(5) {
+  stroke-dasharray: 380.5834655761719;
+  stroke-dashoffset: 380.5834655761719;
+  animation: logo-animation 2s ease forwards 0.9s;
+}
+
+#landing-page-logo path:nth-child(6) {
+  stroke-dasharray: 295.2444763183594;
+  stroke-dashoffset: 295.2444763183594;
+  animation: logo-animation 2s ease forwards 1.2s;
+}
+
+#landing-page-logo path:nth-child(7) {
+  stroke-dasharray: 378.24176025390625;
+  stroke-dashoffset: 378.24176025390625;
+  animation: logo-animation 2s ease forwards 1.5s;
+}
+
+@keyframes logo-animation {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes logo-fill {
+  from {
+    fill: transparent;
+  }
+
+  to {
+    fill: var(--text-secondary);
+    stroke-opacity: 0;
+  }
+}
+
+/* **** # Bloare Logo **** */

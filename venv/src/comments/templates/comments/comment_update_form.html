@@ -1,0 +1,24 @@
+{% extends 'comments/base.html' %}
+
+{% block content %}
+
+<section class="post-delete">
+    <h1 class="heading">Edit Comment/Reply</h1>
+
+    <div class="hr"></div>
+
+    <form method='POST'>
+        {% csrf_token %}
+        <div class="post-delete-form">
+            {{ form.as_p }}
+            <div class="btns">
+                <input type="submit" class="submit-btn">
+                <a href="{% url 'post_detail' object.content_object.id %}" class="cancel-btn">
+                    Cancel
+                </a>
+            </div>
+        </div>
+    </form>
+</section>
+
+{% endblock content %}

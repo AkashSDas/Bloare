@@ -1,0 +1,120 @@
+@import url('global.css');
+
+.profile-container {
+  display: flex;
+  flex-direction: row;
+  margin: 1rem;
+  margin-left: 0rem;
+}
+
+.profile-container .img-container {
+  margin: 1rem;
+}
+
+.profile-container .img-container img {
+  border-radius: 1rem;
+  height: 23rem;
+  width: 23rem;
+  transition: transform .3s;
+}
+
+.profile-container .details {
+  margin: 1rem;
+  height: 23rem;
+  border-radius: 1rem;
+  flex-grow: 2;
+  text-align: center;
+  font-size: 2rem;
+  background-color: var(--bg-secondary);
+}
+
+.profile-container .details .username,
+.profile-container.details .email,
+.profile-container .details .btns {
+  margin: 1.5rem auto;
+}
+
+.profile-container .details .btns {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+}
+
+.profile-container .details .btns>a {
+  font-size: 1.6rem;
+  margin: 0.5rem auto;
+  color: var(--btn-text);
+  font-family: var(--overpass);
+  border-radius: 0.5rem;
+  width: 80%;
+  height: 3rem;
+  transition: transform .3s;
+  line-height: 3rem;
+}
+
+.profile-container .details .btns>a:hover {
+  transform: translateY(-3px);
+}
+
+.profile-container .details .btns .all-posts-btn {
+  background: var(--orange);
+}
+
+.profile-container .details .btns .edit-img-btn {
+  background: var(--purple);
+}
+
+.profile-container .details .btns .edit-details-btn {
+  background: var(--blue);
+}
+
+.forms .details-update-form,
+.forms .img-update-form {
+  display: none;
+  background: var(--bg-secondary);
+  border-radius: .4rem;
+  transition: transform .3s;
+  margin: 4rem 2rem 2rem 2rem;
+  padding: 2rem;
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+.forms .details-update-form p {
+  margin: 1rem 0 1rem 0;
+}
+
+.forms .details-update-form input,
+.forms .img-update-form input {
+  color: var(--text-secondary);
+  background: transparent;
+  border: none;
+  border-bottom: 2px dashed var(--blue);
+  font-size: 1.8rem;
+  width: 75%;
+  font-family: var(--roboto);
+  height: 3rem;
+}
+
+.forms .details-update-form .details-submit-btn,
+.forms .img-update-form .img-submit-btn {
+  color: var(--text-secondary);
+  font-size: 1.4rem;
+  margin: 1.6rem auto;
+  width: 90%;
+  border: none;
+  border-radius: .3rem;
+  background: var(--green);
+  transition: transform .3s;
+  height: 3rem;
+}
+
+
+.profile-container .img-container img:hover,
+.profile-container .details:hover,
+.forms .details-update-form:hover,
+.forms .img-update-form:hover,
+.forms .details-update-form .details-submit-btn:hover,
+.forms .img-update-form .img-submit-btn:hover {
+  transform: translateY(-3px);
+}

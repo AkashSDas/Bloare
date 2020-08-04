@@ -1,0 +1,30 @@
+{% extends 'posts/base.html' %}
+
+{% block content %}
+
+<div class="profile">
+    <div class="heading">Author Info</div>
+
+    <div class="hr"></div>
+
+    <section class="profile-container">
+        <div class="img-container">
+            <img class="author-image" src="{{ post.author.profile.image.url }}" class="img">
+        </div>
+        <div class="details">
+            <h3 class="username">
+                <a href="{% url 'display_author_profile' post.author.profile.user.username post.id %}">
+                    <i class="fas fa-user-ninja"></i> {{ post.author }}
+                </a>
+            </h3>
+
+            <div class="btns">
+                <a class="all-posts-btn" href="{% url 'user_posts' profile.user.username %}">
+                    Author's All Posts
+                </a>
+            </div>
+        </div>
+    </section>
+</div>
+
+{% endblock content %}

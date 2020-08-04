@@ -1,0 +1,28 @@
+{% extends 'accounts/base.html' %}
+
+{% block content %}
+
+<section class="signup">
+    <h1 class="heading">Sign Up Page</h1>
+
+    <div class="hr"></div>
+
+    <div class="content">
+        <div class="img-container">
+            <img src="../../static/accounts/assets/images/img2.png" alt="signup" class="img">
+        </div>
+
+        <div class="form">
+            <form method="POST">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <div class="btn-div">
+                    <input type="submit" class="submit submit-btn">
+                </div>
+            </form>
+            <a href="{% url 'login' %}" class="help">Already have an account?</a>
+        </div>
+    </div>
+</section>
+
+{% endblock content %}

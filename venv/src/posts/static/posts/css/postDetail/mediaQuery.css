@@ -1,0 +1,82 @@
+@import url('../global.css');
+
+
+@media only screen and (max-width: 768px) {
+  .author {
+    flex-direction: column;
+  }
+
+  .author .img-container {
+    margin: 1rem auto;
+  }
+
+  .author .details {
+    flex-grow: 1;
+    height: 22rem;
+  }
+
+  .update-post .edit,
+  .update-post .delete {
+    margin: auto 1rem;
+  }
+
+  .post-content-container .content {
+    margin: 1rem;
+    font-size: 1.2rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  main {
+    margin-left: 0rem;
+    padding: 0;
+    margin-bottom: 5rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  .heading {
+    font-size: 3rem;
+  }
+
+  .form {
+    padding: 1rem;
+  }
+
+  .form p {
+    margin: 1.2rem;
+  }
+
+  .form input,
+  .form textarea {
+    font-size: 1.5rem;
+  }
+
+
+  .author {
+    margin: 0;
+  }
+
+  .author .img-container img {
+    height: 16rem;
+    width: 16rem;
+  }
+
+  .author .details .username {
+    font-size: 1.4rem;
+  }
+
+  .author .details h4.title {
+    font-size: 1.4rem;
+  }
+
+  .author .details .dates {
+    font-size: 1.2rem;
+  }
+}

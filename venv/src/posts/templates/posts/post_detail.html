@@ -1,0 +1,71 @@
+{% extends 'posts/base.html' %} {% block content %}
+
+<div class="post-details">
+  <h1 class="heading">Post Details</h1>
+
+  <div class="hr"></div>
+
+  <div class="author">
+    <div class="img-container">
+      <img src="{{ post.author.profile.image.url }}" alt="{{ post.author.username }}" class="img" />
+    </div>
+    <div class="details">
+      <div class="username">
+        <a href="{% url 'display_author_profile' post.author.username post.id %}">
+          <i class="fas fa-user-ninja"></i> {{ post.author }}
+        </a>
+      </div>
+
+      <div style="margin: 1rem auto;" class="hr"></div>
+
+      <div class="post-details">
+        <h4 class="title">Title - {{ post.title }}</h4>
+
+        <div class="likes">
+          <form action="{% url 'liked_post' %}" method="POST">
+            {% csrf_token %}
+            <button type="submit" name="post_id" value="{{ post.id }}">
+              <i class="fas fa-thumbs-up"></i> {{ post.total_likes }}
+            </button>
+          </form>
+
+          <form action="{% url 'disliked_post' %}" method="POST">
+            {% csrf_token %}
+            <button type="submit" name="post_id" value="{{ post.id }}">
+              <i class="fas fa-thumbs-down"></i> {{ post.total_dislikes }}
+            </button>
+          </form>
+        </div>
+
+        <div class="dates">
+          <span>Posted on - {{ post.date_posted }}</span>
+          <span>Last modified - {{ post.last_modified }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="update-post">
+    {% if user == post.author %}
+    <a class="edit" href="{% url 'post_update' post.id %}"><i class="fas fa-edit"></i> Edit</a>
+    <a class="delete" href="{% url 'post_delete' post.id %}"><i class="fas fa-trash-alt"></i> Delete</a>
+    {% endif %}
+  </div>
+
+  <div class="hr"></div>
+
+  <div class="post-content-container">
+    <h2>Content</h2>
+
+    <div class="content">
+      {{ post.content }}
+    </div>
+  </div>
+
+  <div class="hr"></div>
+
+  <!-- Comment Section -->
+  {% include 'comments/comments.html' %}
+</div>
+
+{% endblock content %}

@@ -1,0 +1,50 @@
+@import url('../global.css');
+
+.post-delete .delete-msg {
+  margin: 2rem auto;
+  font-size: 2rem;
+  text-align: center;
+  color: white;
+  font-family: var(--poppins);
+}
+
+.post-delete-form {
+  background: var(--bg-secondary);
+  margin: 1rem;
+  padding: 2rem;
+  border-radius: .4rem;
+  transition: transform .3s;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.post-delete-form .btns {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.post-delete-form .btns .delete-btn {
+  background: var(--red);
+
+  height: 4rem;
+}
+
+.post-delete-form .btns .cancel-btn {
+  background: var(--blue);
+  height: 3rem;
+  text-align: center;
+  padding-top: .8rem;
+}
+
+.post-delete-form .btns .delete-btn,
+.post-delete-form .btns .cancel-btn {
+  transition: transform .3s;
+  font-family: var(--oswald);
+  color: white;
+  font-size: 1.6rem;
+  width: 45%;
+  margin: auto 1rem;
+  border-radius: 1rem;
+  border: none;
+}

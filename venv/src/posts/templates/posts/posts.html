@@ -1,0 +1,94 @@
+{% extends 'posts/base.html' %}
+
+{% block content %}
+
+<section class="post-list">
+    {% if posts|length == 0 %}
+    <h1 class="heading">No posts yet</h1>
+    {% else %}
+    <h1 class="heading">All Posts</h1>
+
+    <div class="hr"></div>
+    {% endif %}
+
+
+    {% for post in posts %}
+    <div class="post-card">
+        <h3 class="title">
+            <a href="{% url 'post_detail' post.id %}">{{ post.title }}</a>
+        </h3>
+
+        <div class="likes">
+            <form action="{% url 'liked_post' %}" method="POST">
+                {% csrf_token %}
+                <button type="submit" name="post_id" value="{{ post.id }}">
+                    <i class="fas fa-thumbs-up"></i> {{ post.total_likes }}
+                </button>
+            </form>
+
+            <form action="{% url 'disliked_post' %}" method="POST">
+                {% csrf_token %}
+                <button type="submit" name="post_id" value="{{ post.id }}">
+                    <i class="fas fa-thumbs-down"></i> {{ post.total_dislikes }}
+                </button>
+            </form>
+        </div>
+
+        <div class="dates">
+            <span>Posted on - {{ post.date_posted }}</span>
+            <span>Last modified - {{ post.last_modified }}</span>
+        </div>
+
+        <div class="post-content-container">
+            <div class="content">
+                {% if post.content|length > 255 %}
+                {{ post.content|slice:":255" }}...
+                {% else %}
+                {{ post.content }}
+                {% endif %}
+            </div>
+            <a class="read-more-btn" href="{% url 'post_detail' post.id %}">
+                <i class="fas fa-angle-double-right"></i> Read More
+            </a>
+        </div>
+    </div>
+    {% endfor %}
+</section>
+
+<div class="hr"></div>
+
+<!-- ### Pagination Logic ### -->
+<section class="pagination">
+    {% if is_paginated %}
+
+    {% if page_obj.has_previous %}
+    <a href="?page=1">
+        <i class="fas fa-angle-double-left"></i>
+    </a>
+    <a href="?page={{ page_obj.previous_page_number }}">
+        <i class="fas fa-angle-left"></i>
+    </a>
+    {% endif %}
+
+    {% for num in page_obj.paginator.page_range %}
+    {% if page_obj.number == num %}
+    <a href="?page={{ num }}">{{ num }}</a>
+    {% elif num > page_obj.number|add:'-3' and num < page_obj.number|add:'3' %}
+    <a href="?page={{ num }}">{{ num }}</a>
+    {% endif %}
+    {% endfor %}
+
+    {% if page_obj.has_next %}
+    <a href="?page={{ page_obj.next_page_number }}">
+        <i class="fas fa-angle-right"></i>
+    </a>
+    <a href="?page={{ page_obj.paginator.num_pages }}">
+        <i class="fas fa-angle-double-right"></i>
+    </a>
+    {% endif %}
+
+    {% endif %}
+</section>
+<!-- ### #Pagination Logic ### -->
+
+{% endblock content %}

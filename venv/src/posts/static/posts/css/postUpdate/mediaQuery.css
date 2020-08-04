@@ -1,0 +1,43 @@
+@import url('../global.css');
+
+@media only screen and (max-width: 600px) {
+  main {
+    margin-left: 0rem;
+    padding: 0;
+    margin-bottom: 5rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  .heading {
+    font-size: 3rem;
+  }
+
+  .form {
+    padding: 1rem;
+  }
+
+  .form p {
+    margin: 1.2rem;
+  }
+
+  .form input,
+  .form textarea {
+    font-size: 1.5rem;
+  }
+
+  .edit-form .title {
+    font-size: 1.8rem;
+  }
+
+  .edit-form .post-edit-form {
+    margin: 1rem;
+    padding: 1rem;
+  }
+}

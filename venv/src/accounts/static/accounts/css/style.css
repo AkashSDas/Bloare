@@ -1,0 +1,11 @@
+@import url('navbar.css');
+
+/* Signup */
+@import url('./signup.css');
+@import url('./mediaQuery.css');
+
+/* Login */
+@import url('./login.css');
+
+/* Password Reset */
+@import url('./passwordReset.css');

@@ -1,0 +1,58 @@
+@import url('../global.css');
+
+.edit-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.edit-form .title {
+  font-size: 2.2rem;
+  margin: 1rem auto;
+  font-family: var(--overpass);
+  color: var(--blue);
+}
+
+.edit-form .post-edit-form {
+  /* display: none; */
+  background: var(--bg-secondary);
+  border-radius: .4rem;
+  transition: transform .3s;
+  margin: 1rem 2rem 2rem 2rem;
+  padding: 2rem;
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+.edit-form .post-edit-form p {
+  margin: 2rem;
+}
+
+.edit-form .post-edit-form input,
+.edit-form .post-edit-form textarea {
+  color: var(--text-secondary);
+  background: transparent;
+  border: none;
+  border-bottom: 2px dashed var(--blue);
+  font-size: 1.8rem;
+  width: 90%;
+  font-family: var(--roboto);
+  outline: none;
+  height: 3rem;
+}
+
+.edit-form .post-edit-form textarea {
+  height: 16rem;
+}
+
+.edit-form .post-edit-form .submit-btn {
+  color: var(--text-secondary);
+  font-size: 1.4rem;
+  margin: 1.6rem auto;
+  width: 90%;
+  border: none;
+  border-radius: .3rem;
+  background: var(--green);
+  transition: transform .3s;
+  height: 3rem
+}

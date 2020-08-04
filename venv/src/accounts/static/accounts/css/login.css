@@ -1,0 +1,7 @@
+label[for='id_remember_me'] {
+  display: inline;
+}
+
+input[type='checkbox'] {
+  width: 1.6rem;
+}

@@ -1,0 +1,49 @@
+@import url('../global.css');
+
+@media only screen and (max-width: 600px) {
+  main {
+    margin-left: 0rem;
+    padding: 0;
+    margin-bottom: 5rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  .heading {
+    font-size: 3rem;
+  }
+
+  .post-card {
+    margin: 1rem;
+  }
+
+  .post-card .title {
+    font-size: 1.6rem;
+    margin: .2rem auto;
+  }
+
+  .post-card .likes {
+    justify-content: center;
+    margin-top: .8rem;
+  }
+
+  .post-card .dates {
+    font-size: 1rem;
+  }
+
+  .pagination {
+    margin: 2rem auto;
+    font-size: 1rem;
+  }
+
+  .pagination>a {
+    padding: .9rem;
+    margin: .2rem;
+  }
+}

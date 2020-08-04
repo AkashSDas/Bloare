@@ -1,0 +1,21 @@
+{% extends 'posts/base.html' %}
+
+{% block content %}
+
+<section class="edit-form">
+    <h1 class="heading">Edit Page</h1>
+
+    <div class="hr"></div>
+
+    <h3 class="title">Title - {{ object.title }}</h3>
+
+    <form method="POST">
+        {% csrf_token %}
+        <div class="post-edit-form">
+            {{ form.as_p }}
+            <input type="submit" class="submit-btn">
+        </div>
+    </form>
+</section>
+
+{% endblock content %}
